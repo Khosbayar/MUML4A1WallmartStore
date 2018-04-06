@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/welcome"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/tvWelcome"
+        android:text="@string/default_username"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvClickableForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvUsername"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:autoLink="all"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="performLogout"
+        android:text="@string/tv_button_logout"
+        android:textColor="@color/logout"
+        android:textSize="18sp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TableRow android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performElectronics"
+                    android:src="@drawable/electronics" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performElectronics"
+                    android:text="@string/label_electronix"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performClothing"
+                    android:src="@drawable/clothing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performClothing"
+                    android:text="@string/label_clothing"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:layout_margin="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performBeauty"
+                    android:src="@drawable/beauty" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performBeauty"
+                    android:text="@string/label_beauty"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performFood"
+                    android:src="@drawable/food" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="performFood"
+                    android:text="@string/label_food"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

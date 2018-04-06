@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="borderColor">#969c9c</color>
+    <color name="forgotPass">#2d455c</color>
+    <color name="logout">#113a63</color>
+    <color name="createNew">#2c8bea</color>
+</resources>
