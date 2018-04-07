@@ -21,4 +21,31 @@
     <string name="b_create_account">Create Account</string>
     <string name="label_first_name">First name *</string>
     <string name="label_last_name">Last name *</string>
+    <string-array name="beauty_products_array">
+        <item>Makeup</item>
+        <item>Mascara</item>
+        <item>Foundation</item>
+        <item>Lip Gloss</item>
+        <item>Eyeshadow</item>
+        <item>Eyeliner</item>
+        <item>Lip Balm</item>
+        <item>Primer, Shine Control</item>
+        <item>Exfoliators, Scrubs</item>
+    </string-array>
+    <string-array name="clothing_products_array">
+        <item>Heavy sweater</item>
+        <item>Dark-wash jeans</item>
+        <item>Pantsuit</item>
+        <item>Gray flannel pants</item>
+        <item>Wool trousers</item>
+        <item>Down vest</item>
+        <item>Black cashmere wrap coat</item>
+        <item>White button-down shirt (one cotton, one silky)</item>
+        <item>Crisp white blouse</item>
+        <item>Crewneck sweater</item>
+        <item>Cardigan</item>
+        <item>A black dress</item>
+        <item>Pencil skirt</item>
+        <item>Jeans</item>
+    </string-array>
 </resources>

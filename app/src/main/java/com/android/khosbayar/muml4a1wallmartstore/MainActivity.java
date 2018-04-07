@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Welcome to Walmart Application");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -36,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
     public void performSignIn(View view) {
         String username = mUsername.getText().toString();
         String password = mPassword.getText().toString();
-        if (username.length() > 1 && password.length() > 1) {
+        if (username.length() >= 1 && password.length() >= 1) {
             User user = Userdata.findUserByUserName(username);
             if (user != null && user.getPassword().equals(password)) {
                 Intent i = new Intent(MainActivity.this, ShoppingCategoryActivity.class);
-                i.putExtra("name", user.getFirstName() + " " + user.getLastName());
+                i.putExtra("username", user.getFirstName() + " " + user.getLastName());
                 startActivity(i);
                 finish();
             } else {

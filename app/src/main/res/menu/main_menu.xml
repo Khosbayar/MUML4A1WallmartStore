@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/miElectronics" android:title="Electronics" android:icon="@drawable/electronics" app:showAsAction="never" />
+    <item android:id="@+id/miClothing" android:title="Clothing" android:icon="@drawable/clothing" app:showAsAction="never" />
+    <item android:id="@+id/miBeauty" android:title="Beauty" android:icon="@drawable/beauty" app:showAsAction="never" />
+    <item android:id="@+id/miFood" android:title="Food" android:icon="@drawable/food" app:showAsAction="never" />
+    <item android:id="@+id/miLogout" android:title="Logout" app:showAsAction="never" />
+</menu>

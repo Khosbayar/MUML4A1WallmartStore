@@ -4,25 +4,65 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/wallmart_icon"
+        android:icon="@drawable/walmart_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:icon="@drawable/walmart_icon">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShoppingCategoryActivity" />
+        <activity
+            android:name=".ShoppingCategoryActivity"
+            android:icon="@drawable/walmart_icon">
+        </activity>
         <activity
             android:name=".CreateNewActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".BeautyActivity"
+            android:parentActivityName=".ShoppingCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShoppingCategoryActivity" />
+        </activity>
+        <activity
+            android:name=".ClothingActivity"
+            android:parentActivityName=".ShoppingCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShoppingCategoryActivity" />
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:parentActivityName=".ShoppingCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShoppingCategoryActivity" />
+        </activity>
+        <activity
+            android:name=".ElectronicsActivity"
+            android:parentActivityName=".ShoppingCategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShoppingCategoryActivity" />
+        </activity>
+        <activity
+            android:name=".ElectronicsDetailsActivity"
+            android:parentActivityName=".ElectronicsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ElectronicsActivity" />
         </activity>
     </application>
 
