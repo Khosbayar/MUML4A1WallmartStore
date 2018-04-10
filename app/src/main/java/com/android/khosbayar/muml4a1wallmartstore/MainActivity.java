@@ -1,6 +1,7 @@
 package com.android.khosbayar.muml4a1wallmartstore;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mUsername = findViewById(R.id.etEmailAddress);
+        setLasLoginIfExist();
         mPassword = findViewById(R.id.etPassword);
 
 
     }
+
 
     public void performForgotPassword(View view) {
         Toast.makeText(this, "You clicked forgot password, okay got it!", Toast.LENGTH_SHORT).show();
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         if (username.length() >= 1 && password.length() >= 1) {
             User user = Userdata.findUserByUserName(username);
             if (user != null && user.getPassword().equals(password)) {
+                saveLastLoginToSharedPreferences(user.getUsername());
                 Intent i = new Intent(MainActivity.this, ShoppingCategoryActivity.class);
                 i.putExtra("username", user.getFirstName() + " " + user.getLastName());
                 startActivity(i);
@@ -50,6 +54,22 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             Toast.makeText(this, "Please enter the username or password!!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void saveLastLoginToSharedPreferences(String username) {
+        SharedPreferences sharedPreferences = getSharedPreferences("lastLogin", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("lastLoginUsername", username);
+        editor.commit();
+    }
+
+    private void setLasLoginIfExist() {
+        SharedPreferences sharedPreferences = getSharedPreferences("lastLogin", MODE_PRIVATE);
+        boolean hasLast = sharedPreferences.contains("lastLoginUsername");
+        if (hasLast) {
+            String value = sharedPreferences.getString("lastLoginUsername", "");
+            mUsername.setText(value);
         }
     }
 
