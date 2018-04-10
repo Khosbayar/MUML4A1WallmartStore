@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Shared preference branch
         setTitle("Welcome to Walmart Application");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
